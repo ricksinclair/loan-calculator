@@ -10,6 +10,7 @@
             crossorigin="anonymous" />
 
         <title>Loan Calculator</title>
+
     </head>
 
     <body class="bg-dark">
@@ -46,6 +47,9 @@
                         </form>
 
                         <!-- Add Loader GIF here -->
+                        <div id="loading">
+                            <img src="img/loading.gif" alt="loading">
+                        </div>
 
                         <!-- Display results below here (using disabled inputs) -->
                         <div id="results" class="pt-4">
@@ -58,24 +62,26 @@
                                     <input type="number" class="form-control" id="monthly-payment" disabled />
                                 </div>
                             </div>
+
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class=" input-group-text">Total Payment</span>
+                                    </div>
+                                    <input type="number" class="form-control" id="total-payment" disabled />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class=" input-group-text">Total Interest</span>
+                                    </div>
+                                    <input type="number" class="form-control" id="total-interest" disabled />
+                                </div>
+                            </div>
+
                         </div>
 
-                        <div class="form-group">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class=" input-group-text">Total Payment</span>
-                                </div>
-                                <input type="number" class="form-control" id="total-payment" disabled />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class=" input-group-text">Total Interest</span>
-                                </div>
-                                <input type="number" class="form-control" id="total-interest" disabled />
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

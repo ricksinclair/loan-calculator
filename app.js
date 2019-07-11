@@ -1,11 +1,18 @@
 //set global event listeners
+document.getElementById("results").style.display = "none";
+document.getElementById("loading").style.display = "none";
+
 document
   .getElementById("loan-form")
-  .addEventListener("submit", calculateResults);
+  .addEventListener("submit", function(event) {
+    event.preventDefault();
+    //Show Loader
+    document.getElementById("loading").style.display = "block";
+    setTimeout(calculateResults, 1500);
+  });
 
 //
-function calculateResults(event) {
-  event.preventDefault();
+function calculateResults() {
   console.log("Calculating results...");
 
   // Set DOM selector variables
@@ -30,6 +37,11 @@ function calculateResults(event) {
     monthlyPayment.value = monthly.toFixed(2);
     totalPayment.value = (monthly * calculatedPayments).toFixed(2);
     totalInterest.value = (monthly * calculatedPayments - principle).toFixed(2);
+    //Show results
+    document.getElementById("results").style.display = "block";
+
+    //Hide spinner
+    document.getElementById("loading").style.display = "none";
   } else {
     console.log("check your numbers");
   }
