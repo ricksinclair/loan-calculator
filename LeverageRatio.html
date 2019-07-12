@@ -18,8 +18,8 @@
             <div class="row">
                 <div class="col-md-6 mx-auto">
                     <div class="card card-body text-center mt-5">
-                        <h1 class="heading pb-3 display-5">Cash Flow Calculator</h1>
-                        <form id="cashflow-form">
+                        <h1 class="heading pb-3 display-5">Leverage Ratio Calculator</h1>
+                        <form id="leverage-ratio-form">
                             <div class="form-group">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
@@ -34,7 +34,8 @@
                                     <div class="input-group-prepend">
                                         <span class=" input-group-text">-</span>
                                     </div>
-                                    <input type="number" class="form-control" id="expenses" placeholder="Expenses" />
+                                    <input type="number" class="form-control" id="debt-payments"
+                                        placeholder="Debt Payments" />
                                 </div>
                             </div>
 
@@ -51,12 +52,13 @@
                         <!-- Display results below here (using disabled inputs) -->
                         <div id="results" class="pt-4">
                             <h5>Results</h5>
+                            <h6>33 Percent or less is ideal.</h6>
                             <div class="form-group">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
-                                        <span class=" input-group-text">Cash Flow</span>
+                                        <span class=" input-group-text">Leverage Ratio</span>
                                     </div>
-                                    <input type="number" class="form-control" id="cashflow" disabled />
+                                    <input type="text" class="form-control" id="leverage-ratio" disabled />
                                 </div>
                             </div>
                         </div>
@@ -76,7 +78,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
-        <script src="cashFlow.js"></script>
+        <script src="leverageRatio.js"></script>
     </body>
 
 </html>
