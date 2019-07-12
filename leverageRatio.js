@@ -9,6 +9,8 @@ const calculateResults = function(event) {
   document.getElementById("income-radio").checked
     ? leverageRatioIncome()
     : leverageRatioEquity();
+
+  //pull current values from DOM
   let income = parseFloat(document.getElementById("income").value, 10);
   let equity = parseFloat(document.getElementById("equity").value, 10);
   let debtPayments = parseFloat(
