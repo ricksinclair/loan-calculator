@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
             crossorigin="anonymous" />
+        <script src="https://kit.fontawesome.com/138d319efa.js"></script>
 
         <title>Cash Flow Calculator</title>
 
@@ -19,23 +20,47 @@
                 <div class="col-md-6 mx-auto">
                     <div class="card card-body text-center mt-5">
                         <h1 class="heading pb-3 display-5">Leverage Ratio Calculator</h1>
+                        <form id="calc-choose" class="mb-4 m-1">
+                            <div class="form-check d-block">
+                                <input class="form-check-input " type="radio" name="calcChoose" id="income-radio"
+                                    value="income" checked />
+                                <label class="form-check-label" for="leverageRatioIncome"> Income Calculator
+                                </label>
+                            </div>
+                            <div class="form-check d-block m-1">
+
+                                <input class="form-check-input " type="radio" name="calcChoose" id="equity-radio"
+                                    value="equity">
+                                <label class="form-check-label" for="leverageRatioEquity">Equity Calculator
+                                </label>
+                            </div>
+                        </form>
                         <form id="leverage-ratio-form">
-                            <div class="form-group">
+                            <div class="form-group" id="income-group">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
-                                        <span class=" input-group-text">+</span>
+                                        <span class=" input-group-text"><i class="fas fa-piggy-bank"></i></span>
                                     </div>
                                     <input type="number" class="form-control" id="income" placeholder="Income Amount" />
                                 </div>
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group" id="debt-group">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
-                                        <span class=" input-group-text">-</span>
+                                        <span class=" input-group-text"><i
+                                                class="fas fa-money-check-edit-alt"></i></span>
                                     </div>
                                     <input type="number" class="form-control" id="debt-payments"
                                         placeholder="Debt Payments" />
+                                </div>
+                            </div>
+                            <div class="form-group" id="equity-group" style="display:none">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class=" input-group-text"><i class="fas fa-coins"></i></span>
+                                    </div>
+                                    <input type="number" class="form-control" id="equity" placeholder="Equity" />
                                 </div>
                             </div>
 
