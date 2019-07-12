@@ -4,7 +4,7 @@ document.getElementById("loading").style.display = "none";
 
 const calculateResults = function(event) {
   event.preventDefault();
-
+  document.getElementById("results").style.display = "none";
   //Trigger calculations based on radio button status
   document.getElementById("income-radio").checked
     ? leverageRatioIncome()
@@ -15,6 +15,8 @@ const calculateResults = function(event) {
     document.getElementById("debt-payments").value,
     10
   );
+
+  //handle ui aesthetic loading gif
 
   document.getElementById("loading").style.display = "block";
   setTimeout(() => {
@@ -52,14 +54,16 @@ const calculateResults = function(event) {
   }
 };
 
+//event listener callback for calculation selection
 function calcChoose(event) {
   event.preventDefault();
   //clear all values
-  document.getElementById("income").value = 0;
-  document.getElementById("equity").value = 0;
-  document.getElementById("debt-payments").value = 0;
+  document.getElementById("income").value = null;
+  document.getElementById("equity").value = null;
+  document.getElementById("debt-payments").value = null;
   console.log("Calculator Choosen");
 
+  //initialize depending on radio button condition
   if (document.getElementById("income-radio").checked) {
     console.log("using Income Calculator");
     document.getElementById("equity-group").style.display = "none";
@@ -71,6 +75,7 @@ function calcChoose(event) {
   }
 }
 
+//add event listeners
 document
   .getElementById("leverage-ratio-form")
   .addEventListener("submit", calculateResults);
