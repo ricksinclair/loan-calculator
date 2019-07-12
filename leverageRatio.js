@@ -21,9 +21,6 @@ const calculateResults = function(event) {
   //handle ui aesthetic loading gif
 
   document.getElementById("loading").style.display = "block";
-  setTimeout(() => {
-    document.getElementById("loading").style.display = "none";
-  }, 2000);
 
   function leverageRatioEquity() {
     setTimeout(() => {
